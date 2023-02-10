@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+  </head>
+  <body>
+    <!--Formularios-->
+    <form>
+      <!-- Input number -->
+      Número <br />
+      <input type="number" step="3" min="0" max="10" />
+      <!--Input de texto-->
+      <br /><br />
+      Texto <br />
+      <input type="text" placeholder="Ingrese su nombre" maxlength="10" />
+      <br />
+      <br />
+      <!--Input de password-->
+      Contraseña <br />
+      <input
+        type="password"
+        placeholder="Ingrese su contraseña"
+        minlength="3"
+      />
+      <br /><br />
+      <!-- Input email (texto@texto.texto)-->
+      Email <br />
+      <input type="email" placeholder="Ingrese el correo" />
+      <br /><br />
+      <!-- Input date-->
+      Fecha <br />
+      <input type="date" />
+      <br /><br />
+      <!-- Input time -->
+      Hora <br />
+      <input type="time" />
+      <br /><br />
+      <!-- Input color -->
+      Color <br />
+      <input type="color" />
+      <br /><br />
+      <!-- Input file -->
+      Archivo <br />
+      <input type="file" />
+      <br /><br />
+      <!-- TextArea -->
+      Textarea (multiple línea)<br />
+      <textarea cols="70" rows="5"></textarea>
+      <br /><br />
+      <!-- Checkbox -->
+      <input type="checkbox" /> Acepto terminos y condiciones <br /><br />
+      <!-- Radio -->
+      <input type="radio" name="pregunta" />Si
+      <input type="radio" name="pregunta" />No <br /><br />
+      <!-- Select -->
+      Lista desplegable <br />
+      <select>
+        <option>Rojo</option>
+        <option>Azul</option>
+        <option>Verde</option>
+      </select>
+      <br /><br />
+      <!-- Button en forma de input -->
+      Botón input <br />
+      <input type="button" value="Click aquí" />
+      <br /><br />
+      <!-- Button normal -->
+      Botón normal <br />
+      <button type="button">Este es otro botón</button>
+      <br /><br />
+      <!-- Button submit -->
+      Botón para enviar un formulario <br />
+      <button type="submit">Guardar formulario</button>
+      <br /><br />
+      <!-- Button reset -->
+      Botón para borrar todos los campos de un formulario <br />
+      <button type="reset">Borrar</button>
+    </form>
+  </body>
+</html>
