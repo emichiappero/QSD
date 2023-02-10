@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Tablas en HTML
+    
+      table = etiqueta para una tabla
+      tr = etiqueta para una fila
+      td = etiqueta para una columna
+      th = encabezado de una columna
+    -->
+    <h2>Esta es tu compra</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Columna</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Smart TV 55'</td>
+          <td colspan="2">$ 150.000</td>
+        </tr>
+        <tr>
+          <td>Zapatillas Nike</td>
+          <td colspan="2" rowspan="2">$ 50.000</td>
+        </tr>
+        <tr>
+          <td>Algo</td>
+        </tr>
+        <tr>
+          <td>Celular Android</td>
+          <td colspan="2">$ 70.000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>TOTAL</th>
+          <th colspan="2">$ 320.000</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
+<!--
+  Problema: Confeccionar una tabla que muestre en la primer columna los nombre de 
+  distintos empleados de una compañía y en la segunda el sueldo bruto (la compañía tiene 4 empleados)
+-->

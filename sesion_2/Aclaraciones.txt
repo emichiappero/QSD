@@ -1,0 +1,13 @@
+Aclaraciones:
+
+Sólo puedo utilizar: letras, números, guiones (bajos)
+
+- Nombre de los archivos NO llevan espacios en blanco, TODO en minúscula
+  Ej: mi_archivo.html, miarchivo.html, miArchivo.html, nombre_de_mi_archivo.html,
+  nombreDeMiArchivo.html
+
+  Utilizar Camel Case (notación Camello)
+  Ej.: unoDosTresCuatroCinco.html
+
+  NO PUEDE LLEVAR caracteres especiales.
+  Ej.: piña.html, colección.html, vergüenza.html, miArchivo\*.html
