@@ -1,0 +1,49 @@
+/*
+REGLAS DE ESTILO EN CSS
+
+selector { 
+  propiedad: valor;
+  propiedad: valor;
+  propiedad: valor;
+}
+
+Selector puede ser: 
+  - etiqueta (nombre)
+  - class (.)
+  - id (#)
+*/
+
+p {
+  color: #ff54c9; /* HEXADECIMAL (HEX) #A3 (A-F, 0-9) */
+}
+
+button {
+  background-color: orange;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.titulo {
+  color: green;
+}
+
+.cursiva {
+  font-style: italic;
+}
+
+#btn {
+  padding: 20px;
+  background-color: blue;
+}
+
+.contenedor {
+  border: 0.1em dotted #000000;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.espaciado {
+  padding: 15px;
+}

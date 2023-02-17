@@ -1,0 +1,15 @@
+body {
+  background-color: #c2b5ea;
+  padding: 50px;
+}
+
+/*
+Algunos estilos:
+
+- Color de texto => color: valor
+- Color de fondo => background-color: valor
+- Tamaño de fuente => font-size: valor
+- Márgenes => margin: valor
+           => padding: valor
+
+*/

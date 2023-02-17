@@ -1,0 +1,25 @@
+.contenedor {
+  display: flex;
+  border: 2px solid #000;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.item {
+  color: #0f0e0e;
+  background-color: rgb(110, 213, 213);
+  margin: 20px;
+  text-align: center;
+}
+
+/*
+margin: arriba derecha abajo izquierda
+margin: 10px 20px 30px 40px
+
+margin: arriba/abajo der/izq
+margin: 15px 80px
+
+margin: arriba/abajo/der/izq
+margin: 35px
+
+*/

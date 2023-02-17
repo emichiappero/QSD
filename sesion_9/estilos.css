@@ -1,0 +1,24 @@
+.contenedor {
+  display: grid;
+  grid-template-columns: auto 70px auto;
+  gap: 15px;
+}
+
+.item {
+  background-color: #6c6b6b;
+  border: 1px solid #000;
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+}
+
+.ancho {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+#alto {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}

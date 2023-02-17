@@ -8,14 +8,19 @@
   </head>
   <body>
     <!--Formularios-->
-    <form>
+    <form action="script.php" method="post">
       <!-- Input number -->
       Número <br />
-      <input type="number" step="3" min="0" max="10" />
+      <input type="number" step="3" min="0" max="10" name="numero" />
       <!--Input de texto-->
       <br /><br />
       Texto <br />
-      <input type="text" placeholder="Ingrese su nombre" maxlength="10" />
+      <input
+        type="text"
+        placeholder="Ingrese su nombre"
+        maxlength="10"
+        name="nombre"
+      />
       <br />
       <br />
       <!--Input de password-->
@@ -24,19 +29,20 @@
         type="password"
         placeholder="Ingrese su contraseña"
         minlength="3"
+        name="contrasena"
       />
       <br /><br />
       <!-- Input email (texto@texto.texto)-->
       Email <br />
-      <input type="email" placeholder="Ingrese el correo" />
+      <input type="email" placeholder="Ingrese el correo" name="email" />
       <br /><br />
       <!-- Input date-->
       Fecha <br />
-      <input type="date" />
+      <input type="date" name="fec_nac" />
       <br /><br />
       <!-- Input time -->
       Hora <br />
-      <input type="time" />
+      <input type="time" name="hora" />
       <br /><br />
       <!-- Input color -->
       Color <br />
