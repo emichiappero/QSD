@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Creator</title>
+  </head>
+  <body>
+    <div>
+      <h2>Configuración del formulario</h2>
+      <div>
+        <label>Tipo de campo:</label>
+        <select id="input-type">
+          <option value="text">Texto</option>
+          <option value="number">Número</option>
+          <option value="email">Correo electrónico</option>
+          <option value="radiobutton">Botón de radio</option>
+          <option value="checkbox">Casilla de verificación</option>
+          <option value="textarea">Área de texto</option>
+          <option value="select">Lista desplegable</option>
+        </select>
+        <label>Propiedades:</label>
+        <input
+          type="text"
+          id="input-properties"
+          placeholder="Propiedades del campo"
+        />
+        <button id="add-input" onclick="addInput()">Agregar campo</button>
+      </div>
+    </div>
+    <div>
+      <h2>Formulario</h2>
+      <form id="custom-form"></form>
+      <button onclick="generateForm()">Crear formulario</button>
+    </div>
+
+    <script>
+      // Arreglo que contendrá los campos personalizados
+      let customInputs = [];
+
+      // Agrega un nuevo campo al arreglo de campos personalizados
+      function addInput() {
+        const inputType = document.getElementById("input-type").value;
+        const inputProps = document.getElementById("input-properties").value;
+
+        const input = {
+          type: inputType,
+          props: inputProps,
+        };
+
+        customInputs.push(input);
+
+        // Limpia los valores de los campos después de agregar un nuevo campo
+        document.getElementById("input-type").value = "text";
+        document.getElementById("input-properties").value = "";
+      }
+
+      // Genera el formulario con los campos personalizados
+      function generateForm() {
+        const form = document.getElementById("custom-form");
+
+        // Elimina todos los campos del formulario antes de agregar los nuevos campos
+        while (form.firstChild) {
+          form.removeChild(form.firstChild);
+        }
+
+        // Agrega cada campo personalizado al formulario
+        customInputs.forEach((input, index) => {
+          let inputElement;
+
+          switch (input.type) {
+            case "text":
+            case "number":
+            case "email":
+              inputElement = document.createElement("input");
+              inputElement.type = input.type;
+              break;
+            case "radiobutton":
+              inputElement = document.createElement("input");
+              inputElement.type = "radio";
+              break;
+            case "checkbox":
+              inputElement = document.createElement("input");
+              inputElement.type = "checkbox";
+              break;
+            case "textarea":
+              inputElement = document.createElement("textarea");
+              break;
+            case "select":
+              inputElement = document.createElement("select");
+              const option = document.createElement("option");
+              option.text = "Seleccione una opción";
+              inputElement.add(option);
+              break;
+          }
+
+          // Configura las propiedades del campo personalizado
+          const inputProps = input.props.split(",");
+          inputProps.forEach((prop) => {
+            const [propName, propValue] = prop.split(":");
+            inputElement[propName] = propValue;
+          });
+
+          // Agrega el campo personalizado al formulario
+          const label = document.createElement("label");
+        });
+      }
+    </script>
+  </body>
+</html>
