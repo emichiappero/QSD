@@ -183,3 +183,14 @@ switch (opcion) {
     alert("Graciasssss....vuelva prontossss!");
     break;
 }
+
+/*
+EJERCICIO: Playlist
+
+Estas son las opciones:
+- Crear una playlist, teniendo en cuenta que debe grabarse con un nombre
+- Agregar temas a la playlist (todos los que quiera)
+- Buscar temas en una playlist
+- Mostrar los datos de la playlist (nombre y listado de temas)
+
+*/
