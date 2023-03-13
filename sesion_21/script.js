@@ -112,3 +112,22 @@ Según un texto ingresado por el usuario, van a crear 3 funciones:
 Darle a elegir al usuario, como desea transformar el texto (a may o min) y luego se muestra
 
  */
+
+/*
+  Crear una función que determine si la cadena de texto que se le pasa como parámetro es un palíndromo,
+  es decir, si se lee de la misma forma desde la izquierda y desde la derecha. 
+  
+  Ejemplo: 
+  - Anana 
+  - La ruta nos aporto otro paso natural
+
+  array = ["l", "a", "r", "u", "t", "a"]
+  array2= ["a", "t", "u", "r", "a", "l"]
+
+
+  - pasar texto a array, letra por letra
+  - mientras hago ese punto anterior, NO pasar los espacios en blanco
+  - en un for inverso (decrementando), copiar el array y crear otro que empiece desde la ultima letra
+  - convierto array inverso en texto, y lo comparo con el texto ooriginal (sin espacios) y tiene que dar iguales
+
+  */
