@@ -44,6 +44,7 @@ for (var i = 0; i < c.length; i++) {
   console.log(c[i].innerText);
 }
 
+//Ejemplo
 var enlace = document.getElementById("link");
 console.log(enlace.href);
 console.log(enlace.style.color);
