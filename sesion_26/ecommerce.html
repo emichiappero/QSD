@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Ecommerce</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                id="productos"
+                >Productos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="carrito">Carrito</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div
+        class="alert alert-success mt-3 text-center"
+        role="alert"
+        style="display: none"
+      >
+        El <span id="msj_producto"></span> se agregó correctamente a tu
+        <a href="#" class="alert-link">carrito</a>.
+      </div>
+
+      <!--PRODUCTOS-->
+      <section class="secciones" id="seccion_productos">
+        <h1 class="display-6 mt-3">Productos</h1>
+        <div class="row my-5">
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="https://dummyimage.com/400x400/000/ffffff&text=Producto+1"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Producto 1</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary comprar"
+                  id="producto_1"
+                  data-precio="1000"
+                  data-producto="Producto X"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="https://dummyimage.com/400x400/000/ffffff&text=Producto+2"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Producto 2</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary comprar" id="producto_2"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="https://dummyimage.com/400x400/000/ffffff&text=Producto+3"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Producto 3</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary comprar" id="producto_3"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="https://dummyimage.com/400x400/000/ffffff&text=Producto+4"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Producto 4</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary comprar" id="producto_4"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row my-5">
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="https://dummyimage.com/400x400/000/ffffff&text=Producto+5"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Producto 5</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary comprar" id="producto_5"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="https://dummyimage.com/400x400/000/ffffff&text=Producto+6"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Producto 6</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary comprar" id="producto_6"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="https://dummyimage.com/400x400/000/ffffff&text=Producto+7"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Producto 7</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary comprar" id="producto_7"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="https://dummyimage.com/400x400/000/ffffff&text=Producto+8"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Producto 8</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary comprar" id="producto_8"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARRITO -->
+      <section class="secciones" id="seccion_carrito" style="display: none">
+        <h1 class="display-6 mt-3">Carrito</h1>
+        <div class="row g-3 my-5">
+          <div class="col-md-8">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Cantidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Producto 1</td>
+                  <td>$ 150000</td>
+                  <td>x 1</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Producto 3</td>
+                  <td>$ 75000</td>
+                  <td>x 2</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Producto 4</td>
+                  <td>$ 80000</td>
+                  <td>x 1</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="text-end pe-4">
+              <h4>Total: $ 380.000</h4>
+            </div>
+          </div>
+          <div class="col-md-4 bg-light p-4">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="email" class="form-control" id="nombre" />
+              </div>
+              <div class="col-md-6">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" />
+              </div>
+              <div class="col-md-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="col-12">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="direccion"
+                  placeholder="Av. Siempre Viva 742"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="ciudad" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="ciudad" />
+              </div>
+              <div class="col-md-4">
+                <label for="cp" class="form-label">C.P.</label>
+                <input type="text" class="form-control" id="inputZip" />
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Acepto Términos y Condiciones
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-success">Pagar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="secciones" id="seccion_contacto" style="display: none">
+        <h1 class="display-6 mt-3">Contacto</h1>
+      </section>
+    </div>
+
+    <!-- JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./script_ecommerce.js"></script>
+  </body>
+</html>
