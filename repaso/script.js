@@ -50,7 +50,8 @@ var convertido = JSON.parse(localStorage.getItem("datos_ejemplo")); //convierte 
 console.log(typeof convertido);
  */
 
-var dato = prompt("Ingrese un dato");
+//----------------------------------------
+/* var dato = prompt("Ingrese un dato");
 var array = [];
 var i = 0;
 
@@ -76,4 +77,21 @@ var local = JSON.parse(localStorage.getItem("array_local")); // JSON.parse -----
 console.log("------- Recorriendo el array desde el localStorage ---------");
 for (var j = 0; j < local.length; j++) {
   console.log(local[j]);
-}
+} */
+
+// RESUMEN:
+// Siempre que querramos almacenar un array en el localStorage debemos
+// 1) localStorage.setItem("mi_array", JSON.stringify(array) )
+// 2) JSON.parse( localStorage.getItem("mi_array") )
+
+//----------------------------------------
+
+var dato = parseInt(prompt("Ingrese un número"));
+console.log("Normal: " + (dato + 1));
+
+localStorage.setItem("numero", dato);
+var numero_local = parseInt(localStorage.getItem("numero"));
+
+console.log("localStorage: " + (numero_local + 1));
+
+localStorage.setItem("numero", numero_local + 1);
