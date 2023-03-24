@@ -19,5 +19,7 @@ $(document).ready(function () {
 
     $("#msj_producto").text(prod).css("font-weight", 700);
     $(".alert").show();
+
+    alert($(this).data("producto"));
   });
 });
