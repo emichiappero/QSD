@@ -5,7 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./script2.js"></script>
   </head>
-  <body></body>
+  <body>
+    <button class="miBoton" data-numero="1" data-color="azul">Boton 1</button>
+    <button class="miBoton" data-numero="2" data-color="rojo">Boton 2</button>
+    <button class="miBoton" data-numero="3" data-color="verde">Boton 3</button>
+    <button class="miBoton" data-numero="4" data-color="[1, 2, 3]">
+      Boton 4
+    </button>
+
+    <button
+      class="comprar"
+      data-producto="Smart TV 55''"
+      data-precio="100000"
+      data-marca="Samsung"
+    >
+      Comprar
+    </button>
+
+    <br /><br />
+    <hr />
+    <input type="text" id="pelicula" />
+    <button id="btn_pelicula">Obtener dato ingresado</button>
+
+    <br /><br />
+    <hr />
+    <u id="lista">
+      <li id="item_lista">Item 1</li>
+      <li>Item 2</li>
+    </u>
+    <button id="btn_lista_comienzo">Agregar al final</button>
+    <button id="btn_lista_final">Agregar al comienzo</button>
+    <button id="btn_lista_despues">Agregar después de</button>
+    <button id="btn_lista_antes">Agregar antes de</button>
+
+    <br /><br />
+    <hr />
+
+    <input type="text" id="frutas" />
+    <button id="btn_frutas">Guardar en localStorage</button>
+    <button id="btn_mostrar">Mostrar localStorage</button>
+  </body>
 </html>
