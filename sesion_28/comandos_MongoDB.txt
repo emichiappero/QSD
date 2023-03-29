@@ -1,0 +1,55 @@
+FORMA PARA REALIZAR CONSULTAS
+{ clave: "valor" }
+{ <campo>: <valor> }
+{ <campo>: { <operador>: <valor> } }
+
+Ej:
+{ marca: "apple" } ----> consultamos todos los productos con marca Apple
+
+
+OPERADORES MATEMÁTICOS P/MongoDB
+
+$eq ----> igual que (equal)
+$ne ----> distinto que (not equal)
+$gt ----> valores mayores que (greater than)
+$gte ---> valores mayores o iguales que (greater than or equal)
+$lt ----> valores menores que (lower than)
+$lte ---> valores menores o iguales que (lower than or equal)
+
+
+OPERADORES LÓGICOS (AND, OR):
+
+AND
+{ <campo>: <valor>, <campo2>:<valor>, <campo3>:<valor> }
+
+
+EXTRAS:
+
+- Obtener los documentos que el email termine en "nifty.com"
+{ email: { $regex: /nifty.com$/ } }
+
+
+
+CONSULTAS DE EJEMPLO
+********************
+
+1. Obtener documentos que el nombre sea "Andrea"
+{ nombre: { $eq: "Andrea" } }
+{ nombre: "Andrea" }
+
+2. Obtener documentos que nombre NO sea "Peter"
+{ nombre: { $ne: "Peter" } }
+
+3. Obtener las personas mayores de edad
+{ edad: { $gte:18 } } 
+
+4. Obtener aquellas personas que sean mayor de edad Y tengan talle "M"
+{ edad: { $gte: 18 } , talle: "M" }
+
+5. Obtener las personas de genero Femenino que sean menor de edad
+{ edad: { $lt:18 } , genero: "F" }
+
+6. A la consulta anterior, agregar aquelas cuyo talle de remera no sea L
+{ genero: "F", edad: { $lt: 18 }, talle: { $ne: "L" } }
+
+7. Obtener aquellas personas cuyo nombre termine en "a" y su talle sea el "S"
