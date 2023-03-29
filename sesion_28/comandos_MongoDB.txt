@@ -25,10 +25,14 @@ AND
 
 EXTRAS:
 
-- Obtener los documentos que el email termine en "nifty.com"
+- Obtener los documentos que el un campo termine en "nifty.com"
 { email: { $regex: /nifty.com$/ } }
 
+- Obtener documentos que un campo comienze con la letra "a" (no importa si es mayuscula o minuscula)
+{ nombre: { $regex: /^a/i } } ---> la "i" al final del regex, significa que no importa si es mayuscula o minuscula
 
+- Obtener una letra/palabra que este en el medio de un campo. Ej. emiliano@gmail.com
+{ email: { $regex: /gmail/ } }
 
 CONSULTAS DE EJEMPLO
 ********************
@@ -53,3 +57,12 @@ CONSULTAS DE EJEMPLO
 { genero: "F", edad: { $lt: 18 }, talle: { $ne: "L" } }
 
 7. Obtener aquellas personas cuyo nombre termine en "a" y su talle sea el "S"
+{ nombre: { $regex: /a$/ }, talle: "S" }
+
+8. Obtener aquellas personas que su apellido comienza con "P" (may o min), y nacieron en el año 1992, Y
+el idioma es distinto a "Italian"
+{ apellido: { $regex: /^p/i }, fec_nac: { $regex: /1992$/ }, idioma : { $ne: "Italian" } }
+
+9. Obtener las personas que en su titulo contentan una "r" y hayan nacido en el mes de Diciembre
+{ titulo: { $regex: /r/ }, fec_nac: { $regex: /^.*\/12\/.*$/ } }
+
