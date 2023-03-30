@@ -23,7 +23,37 @@ AND
 { <campo>: <valor>, <campo2>:<valor>, <campo3>:<valor> }
 
 
+OR
+
+{ $or: [ {consulta}, {consulta} ]  }
+
+Ejemplo:
+{ $or: [ { genero: "M" }, edad: { $eq: 18 } ] }
+
+
+AND y OR
+{ consulta1, $or: [ {consulta2}, {consulta3} ] }
+
+Ej:
+El talle sea M y que el genero sea M o edad 18 años
+
+{ talle: "M", { $or: [ { genero: "M" }, edad: { $eq: 18 } ] } }
+
+
+
+
 EXTRAS:
+
+$regex: /texto_a_buscar$/     ----> Texto al final
+
+$regex: /^texto_a_buscar/     ----> Texto al comienzo
+
+$regex: /texto_a_buscar/      ----> Texto en el medio
+
+$regex:  /texto_a_buscar/i    ----> Mayusculas y minusculas
+
+
+Ejemplo:
 
 - Obtener los documentos que el un campo termine en "nifty.com"
 { email: { $regex: /nifty.com$/ } }
@@ -33,6 +63,12 @@ EXTRAS:
 
 - Obtener una letra/palabra que este en el medio de un campo. Ej. emiliano@gmail.com
 { email: { $regex: /gmail/ } }
+
+
+Para averiguar si EXISTE un campo determinado
+{ estado_civil: { $exists: true } }
+
+
 
 CONSULTAS DE EJEMPLO
 ********************
@@ -65,4 +101,8 @@ el idioma es distinto a "Italian"
 
 9. Obtener las personas que en su titulo contentan una "r" y hayan nacido en el mes de Diciembre
 { titulo: { $regex: /r/ }, fec_nac: { $regex: /^.*\/12\/.*$/ } }
+
+
+
+
 
