@@ -58,4 +58,19 @@ db.miColeccion.insertMany([ { letra: "A", color:"rojo" }, { letra: "B", color: "
 
 
 
+Eliminar documentos
+*******************
 
+db.miColeccion.deleteOne({ letra: "A"}) ---> eliminar un documento que cumple con la condicion letra = "A"
+
+db.miColeccion.deleteMany({ condicion }) ---> elminar TODOS los documentos que complan con la "condicion"
+
+
+
+Actualizar documentos
+********************
+
+db.miColeccion.updateOne({ condicion }, { $set: { dato: nuevoValor } }) ---> actualiza UN documento que cumple con la condición, y actuzaliza/modifica el "dato" con el nuevo "nuevoValor"
+db.miColeccion.updateOne({ letra: "A" }, { $set: { color: "rosa" } })
+
+db.miColeccion.updateMany({ condicion }, { $set: { dato: nuevoValor } }) ---> actualiza TODOS documento que cumplen con la condición, y actuzaliza/modifica el "dato" con el nuevo "nuevoValor"
