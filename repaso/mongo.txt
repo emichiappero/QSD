@@ -1,0 +1,61 @@
+Ver Bases de Datos
+******************
+
+show dbs
+
+Ver Bases de Datos actual
+*************************
+
+db
+
+Cambiar de BD o crear una (si no existe)
+****************************************
+
+use nombre_bd
+
+Eliminar una Base de Datos (cuidado con esto!!!!)
+**************************
+
+db.dropDatabase()
+
+Crear Colección
+**************
+
+db.createCollection("miColeccion") ---> usualmente el nombre de la colección va en plural, sin espacios, sin caracteres "raros"
+
+Mostrar Colecciones
+*******************
+
+show collections
+
+
+Buscar/Consultar
+****************
+
+db.miColeccion.find() ---> obtengo TODOS los documentos de miColeccion y todos sus datos
+db.miColeccion.find( { edad: { $gt: 30 } } )  ----> obtengo los documentos que cumplen con el criterio de búsqueda (edad > 30)
+db.miColeccion.find({}, { nombre:1 }) ---> obtengo TODOS los documentos, pero sólo veo el nombre y el _id
+
+db.miColeccion.find().count() ---> obtengo la cantidad de documentos que coinciden con ese criterio
+
+db.miColeccion.find().limit(3) ---> obtengo los 3 primeros documentos que coincidan con el criterio de busqueda
+db.miColeccion.find().skip(5) ---> obtengo TODOS los documentos, pero salto los primeros 5 (o sea me muestra desde el 6º en adelante)
+db.miColeccion.find().limit(10).skip(10) ---> obtengo 10 documentos, pero saltando los primeros 10 
+
+db.miColeccion.find().sort({ nombre:1 }) ---> obtengo todos los documentos, y los ordena por el "nombre" ASCENDENTEMENTE (ASC, de la A-Z, de menor a mayor)
+db.miColeccion.find().sort({ edad: -1 }) ---> obtengo todos los documentos, y los ordena por la "edad" DESCENDENTEMENTE (DESC, de la Z-A, de mayor a menor)
+db.miColeccion.find().sort({ nombre: 1, edad: -1 }) ---> combino los ordenamientos
+
+
+Insertar documentos
+*******************
+
+db.miColeccion.insertOne( { documento } ) ---> inserto un documento (en formato JSON)
+db.miColeccion.insertOne( { nombre: "Alejandra", edad: 30, estado: false } )
+
+db.miColeccion.insertMany([{ documento1 },{ documento2 },{ documento3 }]) ---> inserto múltiples documentos
+db.miColeccion.insertMany([ { letra: "A", color:"rojo" }, { letra: "B", color: "azul" }, { letra: "C", color: "verde" } ])
+
+
+
+

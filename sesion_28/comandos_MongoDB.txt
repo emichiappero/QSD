@@ -105,4 +105,34 @@ el idioma es distinto a "Italian"
 
 
 
+Mostrar los 2º 6 (segunda tanda de 6 documentos) documentos de personas que tengan una "h" en su apellido, 
+o NO tengan una "x" en su email.
+Y el talle sea M o S pero no tengan más de 30 años de edad, y hayan nacido los primeros 2 días del año.
 
+
+{ consulta1, consultad, consulta3 }
+
+$or: [ { talle: "M" }, { talle: "S" } ]
+
+talle: { $or[  ] }
+
+{ 
+  $or: [ 
+        { apellido:{ $regex:/h/i } }, 
+        { email: { $not:/x/ } } 
+      ] , 
+
+  $or: [ 
+        { talle: "M" },
+        { talle: "S" }
+       ], 
+
+  edad: { $lte: 30 }, 
+
+  $or: [ 
+        { fec_nac: { $regex: /^01/ } }, 
+        { fec_nac: { $regex: /^02/ } }
+       ] , 
+
+  fec_nac: { $regex: /^.*\/01\/.*$/ } 
+}
