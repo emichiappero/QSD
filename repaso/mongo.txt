@@ -74,3 +74,5 @@ db.miColeccion.updateOne({ condicion }, { $set: { dato: nuevoValor } }) ---> act
 db.miColeccion.updateOne({ letra: "A" }, { $set: { color: "rosa" } })
 
 db.miColeccion.updateMany({ condicion }, { $set: { dato: nuevoValor } }) ---> actualiza TODOS documento que cumplen con la condición, y actuzaliza/modifica el "dato" con el nuevo "nuevoValor"
+
+db.miColeccion.updateOne({ condicion }, { $rename: { claveAnterior: "claveNueva" } }) ---> actualiza el campo "claveAnterior" por "claveNueva" (actualiza clave, NO el valor)
