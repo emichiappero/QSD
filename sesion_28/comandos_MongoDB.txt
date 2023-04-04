@@ -16,6 +16,12 @@ $gte ---> valores mayores o iguales que (greater than or equal)
 $lt ----> valores menores que (lower than)
 $lte ---> valores menores o iguales que (lower than or equal)
 
+$in: sus valores se encuentran dentro del array especificado. 
+     Por ejemplo: { "pais": { $in: ["España", "Francia"] }} mostrará todos los documentos 
+     cuyo campo pais sea España o Francia
+
+$nin: operación contraria a $in, obtiene los documentos cuyo valor NO esté en el array
+
 
 OPERADORES LÓGICOS (AND, OR):
 
