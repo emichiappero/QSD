@@ -9,8 +9,12 @@ var datos_pass = [];
 
 //Configuraciones
 
-//para manejar ordenadamente los datos que provienen del cliente con una peticion POST
+//Configuracion para manejar ordenadamente los datos que provienen del cliente con una peticion POST
 app.use(bodyParser.urlencoded({ extended: true }));
+
+//Configuracion para manejar archivos estáticos (css, imagenes, js, fuentes, etc)
+app.use("/css", express.static("css"));
+app.use("/js", express.static("js"));
 
 //Rutas
 //Inicio (index.html)
