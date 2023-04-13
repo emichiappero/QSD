@@ -6,11 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejemplo con NODE</title>
     <link rel="stylesheet" href="./css/general.css" />
-    <script src="./js/cliente.js"></script>
   </head>
   <body>
     <h1>Bienvenidos</h1>
 
     <a href="/registrarse">Registrarse</a> | <a href="/login">Login</a>
+
+    <hr />
+    <br />
+    <h2>Jugando con AJAX (llamadas asincrónicas)</h2>
+
+    <input type="text" placeholder="Ingrese su nombre" id="campo_nombre" />
+    <button id="btn_enviar">Enviar al servidor</button>
+    <ul id="lista"></ul>
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="./js/cliente.js"></script>
   </body>
 </html>

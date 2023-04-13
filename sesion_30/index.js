@@ -46,7 +46,7 @@ app.post("/form_registro", function (req, res) {
   console.log(datos_pass);
   console.log("---------------------------");
 
-  res.sendFile(__dirname + "/registro.html");
+  res.send("Hola " + nombre + ", gracias por registrarte!");
 });
 
 //Login (login.html)
@@ -76,12 +76,18 @@ app.post("/form_login", function (req, res) {
   console.log(mensaje);
   console.log("---------------------------");
 
-  //res.send(mensaje);
-  res.sendFile(
+  res.send(mensaje);
+  /* res.sendFile(
     existe_usuario == true
       ? __dirname + "/status_ok.html"
       : __dirname + "/status_error.html"
-  );
+  ); */
+});
+
+//Petición por AJAX
+app.post("/ejemplo_ajax", function (req, res) {
+  console.log(req.body);
+  res.send("Hola " + req.body.nombre + ", cómo estás hoy?");
 });
 
 //Puerto

@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>Formulario de Registro</h1>
-    <form action="/form_registro" method="post">
+    <form action="/form_registro" method="post" id="formulario1">
       <input type="text" name="nombre" placeholder="Ingrese su nombre" />
       <br />
       <input type="email" name="email" placeholder="Ingrese su email" />
@@ -21,9 +21,15 @@
       <br /><br />
       <button type="submit">Registrarse</button>
     </form>
+    <h1 id="mensajeRegistro" style="display: none"></h1>
 
     <br /><br />
     <hr />
     <a href="/login">Login</a> | <a href="/inicio">Inicio</a>
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="./js/cliente.js"></script>
   </body>
 </html>
