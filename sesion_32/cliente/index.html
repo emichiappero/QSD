@@ -8,6 +8,22 @@
   </head>
   <body>
     <h2>Listado de Tareas</h2>
+    <ul id="tareas"></ul>
+    <br /><br />
+    <hr />
+    <h2>Crear nueva Tarea</h2>
+    <form id="miFormulario">
+      <input type="text" name="nombre" placeholder="Ingrese la Tarea" />
+      <br />
+      <textarea
+        name="detalle"
+        cols="30"
+        rows="10"
+        placeholder="Ingrese el detalle de la Tarea"
+      ></textarea>
+      <br />
+      <button type="submit">Guardar</button>
+    </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./script_cliente.js"></script>
