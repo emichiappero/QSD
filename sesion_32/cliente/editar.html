@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+  </head>
+  <body>
+    <h2>Modificar Tarea</h2>
+    <form id="formEditar">
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Ingrese la Tarea"
+        id="nombre_tarea"
+      />
+      <br />
+      <textarea
+        name="detalle"
+        cols="30"
+        rows="10"
+        placeholder="Ingrese el detalle de la Tarea"
+        id="detalle_tarea"
+      ></textarea>
+      <br />
+      <button type="submit">Actualizar</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../../script_editar.js"></script>
+  </body>
+</html>

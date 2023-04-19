@@ -25,6 +25,7 @@ const Tarea = require("./models/Tareas");
 
 //Rutas
 
+/* ------ READ ------ */
 //Sitio web principal (index)
 app.get("/", function (req, res) {
   res.sendFile(path.resolve("../cliente/index.html"));
@@ -39,6 +40,7 @@ app.get("/prueba", async function (req, res) {
   res.send(documentos);
 });
 
+/* ------ CREATE ------ */
 // Inserta una nueva tarea en la Base de Datos
 app.post("/nuevaTarea", async function (req, res) {
   console.log(req.body);
@@ -47,24 +49,41 @@ app.post("/nuevaTarea", async function (req, res) {
   res.send("La tarea se registró correctamente!");
 });
 
-// Actualiza la tarea con _id enviado por la ruta
-app.get("/editar/:id", async function (req, res) {
-  let id_enviado = req.params.id;
+/* ------ UPDATE ------ */
+//petición para ver el archivo editar.html
+app.get("/tarea/:id/:nombre_tarea", function (req, res) {
+  let id_tarea = req.params.id;
+  let nom_tarea = req.params.nombre_tarea;
+  res.sendFile(path.resolve("../cliente/editar.html"));
+});
 
-  //Forma 1
-  /* let task = await Tarea.findById(id_enviado);
-  task.nombre = "Tarea modificada";
-  task.detall = "bla bla bla";
-  await task.save(); */
+//petición para buscar información en la BD, sobre una tarea específica
+app.post("/tarea/:id/:nombre_tarea", async function (req, res) {
+  let id_tarea = req.params.id;
+  let nom_tarea = req.params.nombre_tarea;
+  let documento = await Tarea.findById(id_tarea); //consultamos la BD
+  res.send(documento);
+});
 
-  //Forma 2
-  let task = await Tarea.updateOne(
-    { _id: id_enviado },
-    { nombre: "Tarea AAAA" }
-  );
-  console.log(task);
+//Petición para MODIFICAR una tarea
+app.put("/tarea/:id/:nombre_tarea", async function (req, res) {
+  let id_tarea = req.params.id;
+  let datos_recibidos = req.body; //{ nombre: "cortar el pasto", detalle: "bla blbla" }
 
-  res.send("Estamos por editar la tarea con ID = " + id_enviado);
+  await Tarea.updateOne({ _id: id_tarea }, datos_recibidos);
+
+  res.send("Tarea modificada correctamente!");
+});
+
+/* ------ DELETE ------ */
+
+//Petición para ELIMINAR una tarea
+app.get("/eliminar/:id", async function (req, res) {
+  let id_tarea = req.params.id;
+
+  await Tarea.findByIdAndRemove(id_tarea);
+
+  res.redirect("/");
 });
 
 //puerto del servidor

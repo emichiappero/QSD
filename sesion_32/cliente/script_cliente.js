@@ -1,30 +1,44 @@
 $(document).ready(function () {
   //Ejecuto la funcion apenas se carga el archivo
-  peticion_servidor();
+  solicitar_tareas();
 
-  function peticion_servidor() {
+  function solicitar_tareas() {
     $.ajax({
       url: "http://localhost:3000/prueba",
       method: "get",
       success: function (respuesta) {
-        //console.log(respuesta);
         mostrar_lista(respuesta);
       },
     });
   }
 
   function mostrar_lista(resp) {
+    let hipervinculo_editar;
+    let hipervinculo_eliminar;
     $("#tareas").empty(); //vaciar la lista <ul>
     for (let i = 0; i < resp.length; i++) {
       console.log(resp[i]);
+
+      // /tareas/123123/nombre de la tarea
+      hipervinculo_editar =
+        "<a href='/tarea/" +
+        resp[i]._id +
+        "/" +
+        resp[i].nombre +
+        "'> Editar </a>";
+
+      // /eliminar/123445
+      hipervinculo_eliminar =
+        "<a href='/eliminar/" + resp[i]._id + "'>Eliminar</a>";
+
       $("#tareas").append(
         "<li>" +
           resp[i].nombre +
-          " - <a href='/editar/" +
-          resp[i]._id +
-          "'> Editar " +
-          "</a>" +
-          "</li>"
+          "<br> [ " +
+          hipervinculo_editar +
+          " ] [ " +
+          hipervinculo_eliminar +
+          " ] </li><br>"
       );
     }
   }
@@ -41,8 +55,7 @@ $(document).ready(function () {
       data: datos,
       success: function (respuesta) {
         alert(respuesta);
-        //location.href = "/"; //redirecciono al http://localhost:3000/
-        peticion_servidor();
+        solicitar_tareas();
       },
     });
   });
