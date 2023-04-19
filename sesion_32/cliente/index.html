@@ -5,26 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TodoList</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <h2>Listado de Tareas</h2>
-    <ul id="tareas"></ul>
-    <br /><br />
-    <hr />
-    <h2>Crear nueva Tarea</h2>
-    <form id="miFormulario">
-      <input type="text" name="nombre" placeholder="Ingrese la Tarea" />
-      <br />
-      <textarea
-        name="detalle"
-        cols="30"
-        rows="10"
-        placeholder="Ingrese el detalle de la Tarea"
-      ></textarea>
-      <br />
-      <button type="submit">Guardar</button>
-    </form>
-
+    <div class="container p-5">
+      <div class="row text-center mb-5">
+        <h1 class="display-5">TODO List</h1>
+        <p class="lead">Ejemplo realizado con JQuery + NodeJS + MongoDB</p>
+      </div>
+      <div class="row g-5">
+        <div class="col-4">
+          <div class="border bg-light p-4">
+            <form id="miFormulario">
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Nombre de la Tarea"
+                class="form-control"
+              />
+              <br />
+              <textarea
+                name="detalle"
+                cols="30"
+                rows="8"
+                placeholder="Detalle"
+                class="form-control"
+              ></textarea>
+              <br />
+              <button type="submit" class="btn btn-success">Guardar</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="border bg-light p-4">
+            <ul class="list-group" id="tareas"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./script_cliente.js"></script>
   </body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplicación de Gastos e Ingresos | Agregar</title>
+  </head>
+  <body>
+    <a href="/">Inicio</a> - <a href="/agregar">Agregar Gasto/Ingreso</a> -
+    <a href="/listado">Listado</a>
+    <hr />
+    <br /><br />
+    <form id="form_agregar">
+      <select name="tipo">
+        <option value="gasto">Gasto</option>
+        <option value="ingreso">Ingreso</option>
+      </select>
+      <br />
+      <input type="number" name="monto" placeholder="$" />
+      <br />
+      <textarea
+        name="descripcion"
+        cols="30"
+        rows="7"
+        placeholder="Descripción"
+      ></textarea>
+      <br />
+      <input type="date" name="fecha" />
+      <br /><br />
+      <button type="submit">Agregar</button>
+    </form>
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!--JS-->
+    <script src="./crear_gasto.js"></script>
+  </body>
+</html>
