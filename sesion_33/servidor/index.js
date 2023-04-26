@@ -48,8 +48,7 @@ app.get("/listado", function (req, res) {
 
 //Ruta ----> Obtener listado de Gastos de la BD
 app.get("/obtener_gastos", async function (req, res) {
-  let docs = await Gasto.find();
-  res.send(docs);
+  let docs = await Gasto.res.send(docs);
 });
 
 //Ruta ----> Eliminar un gasto de la BD

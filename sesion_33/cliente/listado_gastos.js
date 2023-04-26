@@ -87,14 +87,24 @@ $(document).ready(function () {
   function calcular_total(datos) {
     let total = 0;
     let signo;
+    let color;
     for (let i = 0; i < datos.length; i++) {
       if (datos[i].tipo == "gasto") {
         signo = -1;
       } else {
         signo = 1;
       }
+
       total += signo * datos[i].monto;
+
+      color = total > 0 ? "green" : "red";
     }
-    $("#total").text("TOTAL $" + total);
+    $("#total").html(
+      "TOTAL " + "<span style='color: " + color + "'>$ " + total + "</span>"
+    );
+
+    /* $("#total")
+      .text("TOTAL $" + total)
+      .css("color", color); */
   }
 });
