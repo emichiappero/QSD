@@ -1,0 +1,14 @@
+body {
+  background-color: #f3f4f5;
+}
+
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+  height: 550px;
+  min-width: 600px;
+}
